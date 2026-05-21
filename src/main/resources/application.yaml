@@ -1,3 +1,13 @@
 spring:
   application:
     name: mil
+  datasource:
+    url: jdbc:mysql://localhost:5432/mil
+    username: postgres
+    password: 2635
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+server:
+  port: 8081
