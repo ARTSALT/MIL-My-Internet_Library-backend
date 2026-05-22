@@ -2,7 +2,7 @@ spring:
   application:
     name: mil
   datasource:
-    url: jdbc:mysql://localhost:5432/mil
+    url: jdbc:postgresql://localhost:5432/mil
     username: postgres
     password: 2635
   jpa:
