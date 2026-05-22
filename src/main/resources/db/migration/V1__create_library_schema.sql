@@ -12,8 +12,8 @@ CREATE TABLE books (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     author VARCHAR(150) NOT NULL,
-    publish_year INT NOT NULL,s
-    description TEXT,
+    publish_year INT NOT NULL,
+    synopsis TEXT,
     isbn VARCHAR(20) UNIQUE
 );
 
