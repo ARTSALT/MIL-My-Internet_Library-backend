@@ -33,4 +33,12 @@ public class Book {
     private String synopsis;
 
     private String ISBN;
+
+    public Book(BookRequestDTO book) {
+        this.title = book.title();
+        this.authorName = book.authorName();
+        this.publishYear = book.publishYear();
+        this.synopsis = book.synopsis();
+        this.ISBN = book.isbn();
+    }
 }
