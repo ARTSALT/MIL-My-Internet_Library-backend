@@ -1,5 +1,6 @@
 package com.project.mil.domain.book;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,7 +12,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "books")
+@Entity
 @Table(name = "books")
 @Builder
 @AllArgsConstructor
@@ -24,21 +25,26 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "title", nullable = false)
     private String title;
 
+    @Column(name = "author", nullable = false)
     private String authorName;
 
+    @Column(name = "publish_year")
     private Integer publishYear;
 
+    @Column(name = "synopsis")
     private String synopsis;
 
-    private String ISBN;
+    @Column(name = "isbn")
+    private String isbn;
 
     public Book(BookRequestDTO book) {
         this.title = book.title();
         this.authorName = book.authorName();
         this.publishYear = book.publishYear();
         this.synopsis = book.synopsis();
-        this.ISBN = book.isbn();
+        this.isbn = book.isbn();
     }
 }
