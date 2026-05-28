@@ -31,6 +31,7 @@ public class BookController {
     public ResponseEntity<Book> createBook(@RequestBody BookRequestDTO request) {
 
         Book book = new Book(request);
+        bookService.postBook(book);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(book);
     }
