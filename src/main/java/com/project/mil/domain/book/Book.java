@@ -47,4 +47,10 @@ public class Book {
         this.synopsis = book.synopsis();
         this.isbn = book.isbn();
     }
+
+    @Override
+    public String toString() {
+        return "Book [id=" + id + ", title=" + title + ", authorName=" + authorName + ", publishYear=" + publishYear
+                + ", synopsis=" + synopsis + ", isbn=" + isbn + "]";
+    }
 }
